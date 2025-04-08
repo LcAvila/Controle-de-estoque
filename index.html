@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>Canetas Compactor</title>
+  <title>Equipamentos - Metrologia Compactor</title>
   <!-- Link Styles -->
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="img/favicon.ico" />
@@ -11,79 +11,101 @@
   <div class="sidebar">
     <div class="logo_details">
       <i class="bx bxl-audible icon"></i>
-      <div class="logo_name">Compactor Tintas</div>
+      <div class="logo_name">Metrologia Compactor</div>
       <i class="bx bx-menu" id="btn"></i>
     </div>
     <ul class="nav-list">
       <li>
-        <i class="bx bx-search"></i>
-        <input type="text" placeholder="Pesquisar...">
-         <span class="tooltip">Pesquisar</span>
+        <a href="index.html">
+          <i class='bx bx-wrench'></i>
+          <span class="link_name">Equipamentos</span>
+        </a>
+        <span class="tooltip">Equipamentos</span>
       </li>
       <li>
-        <a href="#">
-          <i class="bx bx-grid-alt"></i>
-          <span class="link_name">Estoque</span>
+        <a href="cadastro-equipamento.html">
+          <i class='bx bx-plus-circle'></i>
+          <span class="link_name">Cadastrar Equipamento</span>
         </a>
-        <span class="tooltip">Estoque</span>
+        <span class="tooltip">Cadastrar Equipamento</span>
       </li>
       <li>
-        <a href="#">
-          <i class="bx bx-user"></i>
-          <span class="link_name">Produção</span>
+        <a href="parametros.html">
+          <i class='bx bxs-objects-horizontal-left'></i>
+          <span class="link_name">Parâmetros</span>
         </a>
-        <span class="tooltip">Produção</span>
+        <span class="tooltip">Parâmetros</span>
       </li>
       <li>
-        <a href="#">
-          <i class="bx bx-chat"></i>
-          <span class="link_name">Entrada</span>
+        <a href="certificados.html">
+          <i class='bx bxs-report'></i>
+          <span class="link_name">Certificados</span>
         </a>
-        <span class="tooltip">Entrada</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-pie-chart-alt-2"></i>
-          <span class="link_name">Saída</span>
-        </a>
-        <span class="tooltip">Saída</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-folder"></i>
-          <span class="link_name">File Manger</span>
-        </a>
-        <span class="tooltip">File Manger</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-cart-alt"></i>
-          <span class="link_name">Order</span>
-        </a>
-        <span class="tooltip">Order</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bx-cog"></i>
-          <span class="link_name">Settings</span>
-        </a>
-        <span class="tooltip">Settings</span>
-      </li>
-      <li class="profile">
-        <div class="profile_details">
-          <img src="profile.jpeg" alt="profile image">
-          <div class="profile_content">
-            <div class="name">Anna Jhon</div>
-            <div class="designation">Admin</div>
-          </div>
-        </div>
-        <i class="bx bx-log-out" id="log_out"></i>
+        <span class="tooltip">Certificados</span>
       </li>
     </ul>
   </div>
   <section class="home-section">
-    <div class="text">Controle de Estoque Tintas</div>
+    <div class="text">Equipamentos</div>
+    <div class="equipment-list-container">
+      <div class="equipment-filters">
+        <input type="text" id="searchEquipment" placeholder="Buscar equipamento...">
+        <select id="filterStatus">
+          <option value="">Todos os Status</option>
+          <option value="available">Disponível</option>
+          <option value="maintenance">Em Manutenção</option>
+          <option value="calibration">Em Calibração</option>
+          <option value="discarded">Descartado</option>
+        </select>
+        <select id="filterSector">
+          <option value="">Todos os Setores</option>
+          <option value="Injetoras">Injetoras</option>
+          <option value="Ferramentaria">Ferramentaria</option>
+          <option value="Controle da Qualidade">Controle da Qualidade</option>
+          <option value="Point Matic">Point Matic</option>
+          <option value="M1">Montagem 1 (M1)</option>
+          <option value="ALM1">Almoxarifado 1 (ALM 1)</option>
+          <option value="ALM2">Almoxarifado 2 (ALM 2)</option>
+          <option value="DPA">Depósito de Produtos Acabados (DPA)</option>
+          <option value="Manutencao">Manutenção</option>
+        </select>
+        <select id="filterType">
+          <option value="">Todos os Tipos</option>
+          <option value="measurement">Medição Linear</option>
+          <option value="weight">Massa e Peso</option>
+          <option value="time">Tempo e Velocidade</option>
+          <option value="temperature">Temperatura</option>
+          <option value="pressure">Pressão e Vazão</option>
+          <option value="optical">Ópticos e Inspeção</option>
+          <option value="other">Outros</option>
+        </select>
+      </div>
+      <table class="equipment-table">
+        <thead>
+          <tr>
+            <th class="col-nomenclature">Nomenclatura</th>
+            <th class="col-type">Tipo</th>
+            <th class="col-sector">Setor</th>
+            <th class="col-status">Status</th>
+            <th class="col-last-calibration">Última Calibração</th>
+            <th class="col-next-calibration">Próxima Calibração</th>
+            <th class="col-actions">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="equipmentTableBody">
+          <!-- Dados dos equipamentos serão inseridos aqui via JavaScript -->
+        </tbody>
+      </table>
+      <div class="add-equipment-button">
+        <a href="cadastro-equipamento.html" class="btn-add">
+          <i class='bx bx-plus'></i>
+          Cadastrar Novo Equipamento
+        </a>
+      </div>
+    </div>
   </section>
+  <!-- Styles -->
+  <link rel="stylesheet" href="modal.css">
   <!-- Scripts -->
   <script src="script.js"></script>
 </body>

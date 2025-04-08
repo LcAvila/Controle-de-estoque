@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Cadastro de Equipamento - Metrologia Compactor</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">Metrologia Compactor</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-wrench'></i>
+          <span class="link_name">Equipamentos</span>
+        </a>
+        <span class="tooltip">Equipamentos</span>
+      </li>
+      <li>
+        <a href="cadastro-equipamento.html">
+          <i class='bx bx-plus-circle'></i>
+          <span class="link_name">Cadastrar Equipamento</span>
+        </a>
+        <span class="tooltip">Cadastrar Equipamento</span>
+      </li>
+      <li>
+        <a href="parametros.html">
+          <i class='bx bxs-objects-horizontal-left'></i>
+          <span class="link_name">Parâmetros</span>
+        </a>
+        <span class="tooltip">Parâmetros</span>
+      </li>
+      <li>
+        <a href="certificados.html">
+          <i class='bx bxs-report'></i>
+          <span class="link_name">Certificados</span>
+        </a>
+        <span class="tooltip">Certificados</span>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="text">Cadastro de Equipamento</div>
+    <div class="equipment-form-container">
+      <form id="equipmentForm" class="equipment-form">
+        <div class="form-group">
+          <label for="type">Tipo*</label>
+          <select id="type" name="type" required>
+            <option value="">Selecione um tipo de equipamento</option>
+            <optgroup label="📏 Instrumentos de Medição Linear">
+              <option value="Paquímetro">Paquímetro</option>
+              <option value="Micrômetro Externo">Micrômetro Externo</option>
+              <option value="Micrômetro Interno">Micrômetro Interno</option>
+              <option value="Micrômetro de Profundidade">Micrômetro de Profundidade</option>
+              <option value="Régua Milimetrada">Régua Milimetrada</option>
+              <option value="Trena Metálica">Trena Metálica</option>
+              <option value="Calibrador de Folga">Calibrador de Folga</option>
+              <option value="Calibrador de Rosca">Calibrador de Rosca</option>
+              <option value="Calibrador Tipo Anel">Calibrador Tipo Anel</option>
+              <option value="Calibrador Tipo Tampão">Calibrador Tipo Tampão</option>
+              <option value="Pino Padrão">Pino Padrão</option>
+            </optgroup>
+            <optgroup label="⚖️ Instrumentos de Massa e Peso">
+              <option value="Balança Analítica">Balança Analítica</option>
+              <option value="Balança de Precisão">Balança de Precisão</option>
+              <option value="Balança Industrial">Balança Industrial</option>
+              <option value="Peso Padrão">Peso Padrão</option>
+            </optgroup>
+            <optgroup label="🕓 Instrumentos de Tempo e Velocidade">
+              <option value="Cronômetro">Cronômetro</option>
+              <option value="Tacômetro">Tacômetro</option>
+              <option value="Estroboscópio">Estroboscópio</option>
+            </optgroup>
+            <optgroup label="🌡️ Instrumentos de Temperatura">
+              <option value="Termômetro Digital">Termômetro Digital</option>
+              <option value="Termômetro Infravermelho">Termômetro Infravermelho</option>
+              <option value="Termômetro de Mercúrio">Termômetro de Mercúrio</option>
+              <option value="Termopar">Termopar</option>
+              <option value="Pirômetro">Pirômetro</option>
+              <option value="Sensor RTD">Sensor RTD</option>
+              <option value="Sensor PT100">Sensor PT100</option>
+            </optgroup>
+            <optgroup label="🌬️ Instrumentos de Pressão e Vazão">
+              <option value="Manômetro">Manômetro</option>
+              <option value="Vacuômetro">Vacuômetro</option>
+              <option value="Transdutor de Pressão">Transdutor de Pressão</option>
+              <option value="Medidor de Vazão">Medidor de Vazão</option>
+              <option value="Medidor de Coluna de Líquido">Medidor de Coluna de Líquido</option>
+            </optgroup>
+            <optgroup label="🔍 Instrumentos Ópticos e de Inspeção">
+              <option value="Projetor de Perfil">Projetor de Perfil</option>
+              <option value="Microscópio de Medição">Microscópio de Medição</option>
+              <option value="Câmera de Inspeção">Câmera de Inspeção</option>
+              <option value="Rugosímetro">Rugosímetro</option>
+              <option value="Durômetro">Durômetro</option>
+              <option value="Refratômetro">Refratômetro</option>
+            </optgroup>
+            <optgroup label="⚙️ Outros Equipamentos">
+              <option value="Torquímetro">Torquímetro</option>
+              <option value="Medidor de Dureza Rockwell">Medidor de Dureza Rockwell</option>
+              <option value="Medidor de Dureza Brinell">Medidor de Dureza Brinell</option>
+              <option value="Medidor de Dureza Vickers">Medidor de Dureza Vickers</option>
+              <option value="Medidor de Espessura Ultrassônico">Medidor de Espessura Ultrassônico</option>
+              <option value="Medidor de Espessura de Pintura">Medidor de Espessura de Pintura</option>
+              <option value="Medidor de pH">Medidor de pH</option>
+              <option value="Data Logger de Temperatura">Data Logger de Temperatura</option>
+              <option value="Data Logger de Umidade">Data Logger de Umidade</option>
+              <option value="Colorímetro">Colorímetro</option>
+              <option value="Espectrofotômetro">Espectrofotômetro</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nomenclature">Nomenclatura</label>
+          <input type="text" id="nomenclature" name="nomenclature" required>
+        </div>
+        <div class="form-group">
+          <label for="sector">Setor*</label>
+          <select id="sector" name="sector" required>
+            <option value="">Selecione um setor</option>
+            <option value="Injetoras">Injetoras</option>
+            <option value="Ferramentaria">Ferramentaria</option>
+            <option value="Controle da Qualidade">Controle da Qualidade</option>
+            <option value="Point Matic">Point Matic</option>
+            <option value="M1">Montagem 1 (M1)</option>
+            <option value="ALM1">Almoxarifado 1 (ALM 1)</option>
+            <option value="ALM2">Almoxarifado 2 (ALM 2)</option>
+            <option value="DPA">Depósito de Produtos Acabados (DPA)</option>
+            <option value="Manutencao">Manutenção</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="status">Status*</label>
+          <select id="status" name="status" required>
+            <option value="">Selecione um status</option>
+            <option value="available">Disponível</option>
+            <option value="maintenance">Em Manutenção</option>
+            <option value="calibration">Em Calibração</option>
+            <option value="discarded">Descartado</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="lastCalibration">Última Calibração*</label>
+          <input type="date" id="lastCalibration" name="lastCalibration" required>
+        </div>
+        <div class="form-group">
+          <label for="nextCalibration">Próxima Calibração*</label>
+          <input type="date" id="nextCalibration" name="nextCalibration" required>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">Cancelar</button>
+          <button type="submit" class="btn-save">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
